@@ -1,27 +1,29 @@
 #include <iosteam>
 #include <array>
 #include <vector>
-
-using namespace std;
+#include <string>
 
 class grid{
 public:
-	int setx(int num){
-		x = num;
-	}
+  int getx(){
+    return x;
+  }
 
-	int setx(int num){
-		y = num;
-	}
+  int gety(){
+    return y;
+  }
 
-	vector<string> setx(vector<string> outlay){
-		layout = outlay;
-	}
+  grid(){
+    int grid_size = 0;
+    std::cout << "choose how large you want the grid";
+    std::cin>> grid_size;
+  }
 
 
 
 private:
 	int x = 0;
 	int y = 0;
-	vector<string> layout;
+  bool mute = false;
+  std::vector<std::vector<std::string>> layout;
 };
